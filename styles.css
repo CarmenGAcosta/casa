@@ -1,0 +1,487 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Encabezado / Menú */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #FFD600; /* Amarillo */
+  }
+  
+  /* Botón toggle (versión responsive) */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+  }
+  
+  .hero {
+    position: relative;
+    height: 80vh;
+    /* Imagen de fondo */
+    background: url("fotos/vista.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Capa superpuesta */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top, right, bottom, left: 0 */
+    background: rgba(0, 0, 0, 0.3); /* Oscurece un poco la imagen por defecto */
+    transition: background 0.3s ease;
+    z-index: 0; /* Para que quede detrás del texto */
+  }
+  
+  /* Al pasar el ratón */
+  .hero:hover::before {
+    background: rgba(0, 0, 0, 0.5); /* Aumenta la opacidad para oscurecer más */
+  }
+  
+  /* El contenido de la sección debe estar por encima de la capa oscura */
+  .hero-content {
+    position: relative;
+    z-index: 1; /* Eleva el texto por encima del ::before */
+  }
+  
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-amarillo {
+    background-color: #FFD600;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-amarillo:hover {
+    background-color: #ffc400; /* Un amarillo ligeramente más oscuro */
+  }
+  
+  /* Sección Detalles */
+  .detalles {
+    background-color: #fff;
+    padding: 3rem 2rem;
+  }
+  
+  .detalles-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .detalles-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detalles-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .detalles-content ul {
+    list-style: none;
+    text-align: left;
+    margin: 2rem 0;
+  }
+  
+  .detalles-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  
+  .detalles-content li::before {
+    content: "•";
+    color: #FFD600;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  
+  .detalles {
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  /* Título */
+  .detalles h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Sección de detalles */
+.detalles {
+    margin: 3rem auto;
+    max-width: 1200px; /* El contenedor general puede tener un ancho máximo, si lo deseas */
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .detalles h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Sección de detalles */
+.detalles {
+    margin: 3rem auto;
+    max-width: 1200px;  /* Ajusta si deseas un límite de ancho en modo normal */
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  /* Título */
+  .detalles h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Contenedor principal del carrusel */
+  .carousel-container {
+    position: relative;
+    overflow: hidden;  /* Oculta los slides que salen del contenedor */
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Pista que contiene las diapositivas */
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Cada diapositiva ocupa 100% del ancho disponible */
+  .carousel-slide {
+    min-width: 100%;
+    position: relative;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+  
+  /* Imágenes dentro de la diapositiva:
+     - object-fit: contain => sin recorte ni deformaciones
+     - max-width: 100% => que no supere el ancho del contenedor
+     - max-height: 80vh => se adapta al alto de la ventana en modo normal
+  */
+  .carousel-slide img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh; 
+    object-fit: contain;
+    background-color: #f8f8f8; /* Color de fondo cuando sobra espacio */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Descripción superpuesta en la parte inferior de la imagen */
+  .carousel-caption {
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+  
+  /* Controles del carrusel (Anterior / Siguiente) en modo normal */
+  .carousel-controls {
+    margin-top: 1rem;
+  }
+  
+  .carousel-controls button {
+    background-color: #ffd700; 
+    color: #333;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-controls button:hover {
+    background-color: #f5cd00;
+  }
+  
+  /* Botones de Fullscreen */
+  .fullscreen-controls {
+    margin-top: 1rem;
+  }
+  
+  .fullscreen-controls button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+  
+  .fullscreen-controls button:hover {
+    background-color: #555;
+  }
+  
+  /* Flechas laterales en modo fullscreen */
+  .fullscreen-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    pointer-events: none; /* Permite que los clics pasen a los botones sin obstruir la imagen */
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .arrow-btn {
+    pointer-events: auto; /* Para que el botón reciba el clic */
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .arrow-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .arrow-btn-left {
+    margin-left: 1rem;
+  }
+  
+  .arrow-btn-right {
+    margin-right: 1rem;
+  }
+  
+  /* === MODO FULLSCREEN === */
+  /* Cuando .carousel-container entre en fullscreen, el navegador aplica :fullscreen.
+     Algunos navegadores usan ::-webkit-full-screen o ::-moz-full-screen. 
+     Para mayor compatibilidad, lo simplificamos con el evento JS que añade una clase. */
+  .carousel-container.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    border-radius: 0; /* Sin esquinas redondeadas en fullscreen */
+    box-shadow: none; /* Sin sombras, para ocupar toda la pantalla */
+  }
+  
+  /* Ajustar imágenes dentro de .fullscreen: ocupar al máximo la pantalla sin recortarse */
+  .carousel-container.fullscreen .carousel-slide img {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  
+  /* Mostramos las flechas laterales al estar en fullscreen */
+  .carousel-container.fullscreen + .fullscreen-arrows {
+    display: flex !important;
+  }
+  
+
+  
+  /* Sección Amenidades */
+  .amenidades {
+    background-color: #f0f0f0;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .amenidades h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .amenidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .amenidad-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .amenidad-card img {
+    margin-bottom: 1rem;
+  }
+  
+  .amenidad-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .amenidad-card p {
+    color: #555;
+  }
+  
+  .amenidad-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Sección Contacto */
+  .contacto {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .contacto-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contacto-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contacto-content p {
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  label {
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  input, textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  
+  button[type="submit"] {
+    align-self: start;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 2rem;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+    }
+  
+    .nav-menu.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .hero {
+      height: 60vh;
+    }
+  }
+  

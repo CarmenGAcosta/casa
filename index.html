@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Anuncio de casa de lujo en Querétaro, México." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa de Lujo en Querétaro</title>
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fuentes (opcional, ejemplo con Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+<body>
+
+  <!-- Encabezado / Menú -->
+  <header class="header">
+    <div class="logo">CUMBRES DEL LAGO, QUERÉTARO</div>
+    <nav class="nav-menu">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#detalles" class="nav-link">Detalles</a>
+      <a href="#amenidades" class="nav-link">Amenidades</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+    <!-- Botón para toggle responsive (si deseas hacerlo) -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <!-- Sección Hero / Portada -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Casa de Lujo en Querétaro</h1>
+      <p>Vive la experiencia de un hogar exclusivo, ubicado en el corazón de Querétaro.</p>
+      <a href="#detalles" class="btn-amarillo">Ver detalles</a>
+    </div>
+  </section>
+  
+
+  <!-- Sección de Detalles -->
+  <section class="detalles" id="detalles">
+    <div class="detalles-content">
+      <h2>Detalles de la Propiedad</h2>
+      <p>
+        Esta residencia cuenta con amplios espacios, acabados de alta calidad y una ubicación privilegiada.
+        Diseñada para brindar comodidad y lujo en cada rincón.
+      </p>
+      <ul>
+        <li>4 recámaras con baño completo</li>
+        <li>Espacio de sala y comedor con vistas panorámicas</li>
+        <li>Cocina equipada con electrodomésticos de alta gama</li>
+        <li>Jardín amplio y terraza</li>
+        <li>Estacionamiento techado para 2 autos</li>
+      </ul>
+      <img src="fotos/fachada.jpg" alt="Casa de lujo en Querétaro" />
+    </div>
+  </section>
+
+  <section id="detalles" class="detalles">
+    <h2>Detalles de la Propiedad</h2>
+  
+    <!-- Contenedor general del carrusel -->
+    <div class="carousel-container">
+      <!-- Pista que contendrá todas las diapositivas (slides) -->
+      <div class="carousel-track">
+        <!-- Diapositiva 1 -->
+        <div class="carousel-slide">
+          <img 
+            src="fotos/1.jpg" 
+            alt="Foto Vertical" 
+          />
+          <p class="carousel-caption">Foto Vertical Ejemplo</p>
+        </div>
+        <div class="carousel-slide">
+            <img 
+              src="fotos/2.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/3.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div><div class="carousel-slide">
+            <img 
+              src="fotos/4.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/5.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/6.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/7.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/8.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/9.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/10.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/11.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/12.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          <div class="carousel-slide">
+            <img 
+              src="fotos/13.jpg" 
+              alt="Foto Horizontal" 
+            />
+            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+   <!-- Botones de control del carrusel (visibles fuera de fullscreen) -->
+  <div class="carousel-controls">
+    <button id="prevBtn">Anterior</button>
+    <button id="nextBtn">Siguiente</button>
+  </div>
+
+  <!-- Botones de Pantalla Completa -->
+  <div class="fullscreen-controls">
+    <button id="enterFullscreenBtn">Pantalla Completa</button>
+    <button id="exitFullscreenBtn" style="display: none;">X</button>
+  </div>
+
+  <!-- Flechas de Navegación en Modo Fullscreen -->
+  <!-- Por defecto están ocultas, se muestran solo al entrar en fullscreen -->
+  <div class="fullscreen-arrows" style="display: none;">
+    <button id="prevFullscreenBtn" class="arrow-btn arrow-btn-left">&#10094;</button>
+    <button id="nextFullscreenBtn" class="arrow-btn arrow-btn-right">&#10095;</button>
+  </div>
+</section>
+
+  <!-- Sección de Amenidades -->
+  <section class="amenidades" id="amenidades">
+    <h2>Amenidades Exclusivas</h2>
+    <div class="amenidades-grid">
+      <div class="amenidad-card">
+        <img src="https://via.placeholder.com/150" alt="Amenidad 1">
+        <h3>Casa Club</h3>
+        <p>Espacio social para eventos privados y reuniones.</p>
+      </div>
+      <div class="amenidad-card">
+        <img src="https://via.placeholder.com/150" alt="Amenidad 2">
+        <h3>Alberca</h3>
+        <p>Disfruta de un día soleado en la alberca semi-olímpica.</p>
+      </div>
+      <div class="amenidad-card">
+        <img src="https://via.placeholder.com/150" alt="Amenidad 3">
+        <h3>Áreas Verdes</h3>
+        <p>Zonas arboladas para caminar y ejercitarte al aire libre.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+  <!-- Sección de Contacto -->
+  <section class="contacto" id="contacto">
+    <div class="contacto-content">
+      <h2>Contáctanos</h2>
+      <p>Obtén más información o programa una visita.</p>
+      <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit" class="btn-amarillo">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Casa de Lujo en Querétaro. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Archivo JavaScript -->
+  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const track = document.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+  
+      // Botones "Anterior" / "Siguiente" (MODO NORMAL)
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+  
+      // Botones "Anterior" / "Siguiente" (MODO FULLSCREEN) => Flechas laterales
+      const prevFullscreenBtn = document.getElementById('prevFullscreenBtn');
+      const nextFullscreenBtn = document.getElementById('nextFullscreenBtn');
+  
+      // Botones para entrar / salir de fullscreen
+      const enterFullscreenBtn = document.getElementById('enterFullscreenBtn');
+      const exitFullscreenBtn = document.getElementById('exitFullscreenBtn');
+  
+      // Contenedor del carrusel
+      const carouselContainer = document.querySelector('.carousel-container');
+      // Contenedor flechas fullscreen
+      const fullscreenArrows = document.querySelector('.fullscreen-arrows');
+  
+      let currentIndex = 0;
+  
+      // Función para mostrar la diapositiva "index"
+      function showSlide(index) {
+        currentIndex = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+  
+      // Eventos de los botones para cambiar diapositiva
+      prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+      nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+  
+      // Igual para las flechas en fullscreen
+      prevFullscreenBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+      nextFullscreenBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+  
+      // === Fullscreen: Entrar ===
+      enterFullscreenBtn.addEventListener('click', () => {
+        if (carouselContainer.requestFullscreen) {
+          carouselContainer.requestFullscreen();
+        } else if (carouselContainer.webkitRequestFullscreen) {
+          // Safari
+          carouselContainer.webkitRequestFullscreen();
+        } else if (carouselContainer.msRequestFullscreen) {
+          // IE11
+          carouselContainer.msRequestFullscreen();
+        }
+      });
+  
+      // === Fullscreen: Salir ===
+      exitFullscreenBtn.addEventListener('click', () => {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          // Safari
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          // IE11
+          document.msExitFullscreen();
+        }
+      });
+  
+      // Evento que se dispara al entrar o salir de fullscreen
+      document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement === carouselContainer) {
+          // Estamos en fullscreen con el contenedor
+          enterFullscreenBtn.style.display = 'none';
+          exitFullscreenBtn.style.display = 'inline-block';
+  
+          // Añadimos la clase .fullscreen para aplicar estilos
+          carouselContainer.classList.add('fullscreen');
+        } else {
+          // Se salió de fullscreen
+          enterFullscreenBtn.style.display = 'inline-block';
+          exitFullscreenBtn.style.display = 'none';
+  
+          // Quitamos la clase .fullscreen
+          carouselContainer.classList.remove('fullscreen');
+        }
+      });
+  
+      // Iniciamos el carrusel en la primera diapositiva
+      showSlide(currentIndex);
+    });
+  </script>
+  
+  
+  
+
+</body>
+</html>
