@@ -49,3 +49,33 @@ contactForm.addEventListener('submit', (event) => {
     showSlide(currentIndex - 1);
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("videoVertical");
+  
+    // Función para verificar si el video está en pantalla
+    function checkVisibility() {
+      const rect = video.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+        if (video.paused) {
+          video.play();
+          video.muted = false; // Activa el sonido automáticamente
+        }
+      } else {
+        video.pause(); // Se pausa cuando sale de pantalla
+      }
+    }
+  
+    // Detectar cuando el usuario hace scroll
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Ejecutar al cargar la página
+  
+    // Hacer clic en el video para pausar/reproducir manualmente
+    video.addEventListener("click", function () {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  });
+  

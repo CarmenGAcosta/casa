@@ -117,7 +117,61 @@
   .btn-amarillo:hover {
     background-color: #ffc400; /* Un amarillo ligeramente más oscuro */
   }
+  .hero {
+    margin-bottom: 10px; /* Espacio debajo de la portada */
+  }
   
+  .video-section {
+    margin-top: 10px; /* Espacio arriba del video */
+  }
+  
+
+/* Sección de Video */
+.video-section {
+  width: 100%;
+  max-width: 848px; /* Ancho máximo */
+  height: 424px; /* Altura fija */
+  margin: 0 auto; /* Centrar horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: black;
+  overflow: hidden;
+}
+
+/* Estilo del video */
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajustar sin deformar */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Sección del Video Vertical */
+.video-vertical-section {
+  width: 100%;
+  max-width: 1080px; /* Ancho máximo del video */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  cursor: pointer; /* Indica que es interactivo */
+}
+
+/* Video en formato vertical */
+.video-vertical-section video {
+  width: 100%;
+  max-width: 360px; /* Tamaño estándar responsivo */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; /* Ajuste sin distorsión */
+}
+
   /* Sección Detalles */
   .detalles {
     background-color: #fff;

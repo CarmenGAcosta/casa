@@ -42,6 +42,15 @@
     </div>
   </section>
   
+<!-- Sección de Video -->
+<section class="video-section">
+  <video autoplay loop muted playsinline>
+    <source src="videos/intro.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+</section>
+
+
 
   <!-- Sección de Detalles -->
   <section class="detalles" id="detalles">
@@ -62,6 +71,15 @@
     </div>
   </section>
 
+<!-- Sección de Video Vertical con Auto-Reproducción y Sonido -->
+<section class="video-vertical-section">
+  <video id="videoVertical" loop playsinline>
+    <source src="videos/vertical.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+</section>
+
+
   <section id="detalles" class="detalles">
     <h2>Detalles de la Propiedad</h2>
   
@@ -72,90 +90,62 @@
         <!-- Diapositiva 1 -->
         <div class="carousel-slide">
           <img 
-            src="fotos/1.jpg" 
+            src="fotos/1.1.png" 
             alt="Foto Vertical" 
           />
           <p class="carousel-caption">Foto Vertical Ejemplo</p>
         </div>
         <div class="carousel-slide">
             <img 
-              src="fotos/2.jpg" 
+              src="fotos/2.2.png" 
               alt="Foto Horizontal" 
             />
             <p class="carousel-caption">Foto Horizontal Ejemplo</p>
           </div>
           <div class="carousel-slide">
             <img 
-              src="fotos/3.jpg" 
+              src="fotos/3.3.png" 
               alt="Foto Horizontal" 
             />
             <p class="carousel-caption">Foto Horizontal Ejemplo</p>
           </div><div class="carousel-slide">
             <img 
-              src="fotos/4.jpg" 
+              src="fotos/4.4.png" 
               alt="Foto Horizontal" 
             />
             <p class="carousel-caption">Foto Horizontal Ejemplo</p>
           </div>
           <div class="carousel-slide">
             <img 
-              src="fotos/5.jpg" 
+              src="fotos/5.5.png" 
               alt="Foto Horizontal" 
             />
             <p class="carousel-caption">Foto Horizontal Ejemplo</p>
           </div>
           <div class="carousel-slide">
             <img 
-              src="fotos/6.jpg" 
+              src="fotos/6.6.png" 
               alt="Foto Horizontal" 
             />
             <p class="carousel-caption">Foto Horizontal Ejemplo</p>
           </div>
           <div class="carousel-slide">
             <img 
-              src="fotos/7.jpg" 
+              src="fotos/7.7.png" 
               alt="Foto Horizontal" 
             />
             <p class="carousel-caption">Foto Horizontal Ejemplo</p>
           </div>
           <div class="carousel-slide">
             <img 
-              src="fotos/8.jpg" 
+              src="fotos/8.8.png" 
               alt="Foto Horizontal" 
             />
             <p class="carousel-caption">Foto Horizontal Ejemplo</p>
           </div>
           <div class="carousel-slide">
             <img 
-              src="fotos/9.jpg" 
-              alt="Foto Horizontal" 
-            />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
-          </div>
-          <div class="carousel-slide">
-            <img 
-              src="fotos/10.jpg" 
-              alt="Foto Horizontal" 
-            />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
-          </div>
-          <div class="carousel-slide">
-            <img 
-              src="fotos/11.jpg" 
-              alt="Foto Horizontal" 
-            />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
-          </div>
-          <div class="carousel-slide">
-            <img 
-              src="fotos/12.jpg" 
-              alt="Foto Horizontal" 
-            />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
-          </div>
-          <div class="carousel-slide">
-            <img 
-              src="fotos/13.jpg" 
+              src="fotos/9.9.png" 
               alt="Foto Horizontal" 
             />
             <p class="carousel-caption">Foto Horizontal Ejemplo</p>
@@ -324,7 +314,38 @@
       // Iniciamos el carrusel en la primera diapositiva
       showSlide(currentIndex);
     });
+    document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("videoVertical");
+  
+    // Función para verificar si el video está en pantalla
+    function checkVisibility() {
+      const rect = video.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+        if (video.paused) {
+          video.play();
+          video.muted = false; // Activa el sonido automáticamente
+        }
+      } else {
+        video.pause(); // Se pausa cuando sale de pantalla
+      }
+    }
+  
+    // Detectar cuando el usuario hace scroll
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Ejecutar al cargar la página
+  
+    // Hacer clic en el video para pausar/reproducir manualmente
+    video.addEventListener("click", function () {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  });
+  
   </script>
+  
   
   
   
