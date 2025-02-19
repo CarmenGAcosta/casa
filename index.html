@@ -22,11 +22,11 @@
 
   <!-- Encabezado / Menú -->
   <header class="header">
-    <div class="logo">CUMBRES DEL LAGO, QUERÉTARO</div>
+    <div class="logo">CHAKNOCHUK 441, QUERÉTARO</div>
     <nav class="nav-menu">
       <a href="#inicio" class="nav-link">Inicio</a>
       <a href="#detalles" class="nav-link">Detalles</a>
-      <a href="#amenidades" class="nav-link">Amenidades</a>
+      <a href="#amenidades" class="nav-link">Plusavalía y Exclusividad</a>
       <a href="#contacto" class="nav-link">Contacto</a>
     </nav>
     <!-- Botón para toggle responsive (si deseas hacerlo) -->
@@ -42,34 +42,72 @@
     </div>
   </section>
   
-<!-- Sección de Video -->
-<section class="video-section">
-  <video autoplay loop muted playsinline>
+<!-- Sección del Video Principal con Auto-Reproducción, Sonido y Mute Automático -->
+<section class="video-principal-section">
+  <video id="videoPrincipal" loop playsinline>
     <source src="videos/intro.mp4" type="video/mp4">
     Tu navegador no soporta videos.
   </video>
+  <button id="muteTogglePrincipal" class="mute-button">🔊</button>
 </section>
 
 
 
-  <!-- Sección de Detalles -->
-  <section class="detalles" id="detalles">
-    <div class="detalles-content">
-      <h2>Detalles de la Propiedad</h2>
-      <p>
-        Esta residencia cuenta con amplios espacios, acabados de alta calidad y una ubicación privilegiada.
-        Diseñada para brindar comodidad y lujo en cada rincón.
-      </p>
-      <ul>
-        <li>4 recámaras con baño completo</li>
-        <li>Espacio de sala y comedor con vistas panorámicas</li>
-        <li>Cocina equipada con electrodomésticos de alta gama</li>
-        <li>Jardín amplio y terraza</li>
-        <li>Estacionamiento techado para 2 autos</li>
-      </ul>
-      <img src="fotos/fachada.jpg" alt="Casa de lujo en Querétaro" />
-    </div>
-  </section>
+ <!-- Sección de Detalles de la Propiedad -->
+<section class="detalles-propiedad" id="detalles">
+  <h2>🏡 Detalles de la Propiedad</h2>
+  <ul class="lista-detalles">
+    <li>
+      <span class="icon">🛏️</span>
+      5 habitaciones amplias y luminosas, diseñadas para el máximo confort.
+    </li>
+    <li>
+      <span class="icon">🚿</span>
+      6 baños de lujo, con acabados de alta gama y diseño elegante.
+    </li>
+    <li>
+      <span class="icon">🌳</span>
+      Jardín privado + jardín techado con piso de vidrio iluminado, un espacio único y sofisticado.
+    </li>
+    <li>
+      <span class="icon">🍽️</span>
+      Cocina integral completa, equipada con electrodomésticos de última generación.
+    </li>
+    <li>
+      <span class="icon">👗</span>
+      Closets empotrados en todas las habitaciones, optimizando espacio y estilo.
+    </li>
+    <li>
+      <span class="icon">🏢</span>
+      Exclusiva habitación de dos niveles, con diseño arquitectónico innovador.
+    </li>
+    <li>
+      <span class="icon">🛁</span>
+      Majestuosa suite principal con vestidor amplio y un relajante Jacuzzi privado.
+    </li>
+    <li>
+      <span class="icon">🧹</span>
+      Recámara de servicio con baño propio, ideal para mayor comodidad y privacidad.
+    </li>
+    <li>
+      <span class="icon">🚗</span>
+      Estacionamiento techado para 3 vehículos, con acceso seguro y funcional.
+    </li>
+    <li>
+      <span class="icon">⛽</span>
+      Tanque de gas estacionario de 300 L, garantizando eficiencia y autonomía.
+    </li>
+    <li>
+      <span class="icon">💧</span>
+      Sistema de agua optimizado: boiler de alto rendimiento y presurizador.
+    </li>
+    <li>
+      <span class="icon">❄️</span>
+      Climatización avanzada con 2 aires acondicionados para máximo confort.
+    </li>
+  </ul>
+</section>
+
 
 <!-- Sección de Video Vertical con Auto-Reproducción y Sonido -->
 <section class="video-vertical-section">
@@ -81,7 +119,7 @@
 
 
   <section id="detalles" class="detalles">
-    <h2>Detalles de la Propiedad</h2>
+    <h2>Galería</h2>
   
     <!-- Contenedor general del carrusel -->
     <div class="carousel-container">
@@ -93,62 +131,62 @@
             src="fotos/1.1.png" 
             alt="Foto Vertical" 
           />
-          <p class="carousel-caption">Foto Vertical Ejemplo</p>
+          <p class="carousel-caption">Entrada principal con espacio para 3 vehículos.</p>
         </div>
         <div class="carousel-slide">
             <img 
               src="fotos/2.2.png" 
               alt="Foto Horizontal" 
             />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+            <p class="carousel-caption">Cocina integral completamente equipada.</p>
           </div>
           <div class="carousel-slide">
             <img 
               src="fotos/3.3.png" 
               alt="Foto Horizontal" 
             />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+            <p class="carousel-caption">Sala de estar y comedor.</p>
           </div><div class="carousel-slide">
             <img 
               src="fotos/4.4.png" 
               alt="Foto Horizontal" 
             />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+            <p class="carousel-caption">Patio y terraza cubierta.</p>
           </div>
           <div class="carousel-slide">
             <img 
               src="fotos/5.5.png" 
               alt="Foto Horizontal" 
             />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+            <p class="carousel-caption">1 de 6 baños.</p>
           </div>
           <div class="carousel-slide">
             <img 
               src="fotos/6.6.png" 
               alt="Foto Horizontal" 
             />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+            <p class="carousel-caption">Habitación de dos pisos para niños con tubo de bomberos</p>
           </div>
           <div class="carousel-slide">
             <img 
               src="fotos/7.7.png" 
               alt="Foto Horizontal" 
             />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+            <p class="carousel-caption">Zona de alta plusvalía.</p>
           </div>
           <div class="carousel-slide">
             <img 
               src="fotos/8.8.png" 
               alt="Foto Horizontal" 
             />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+            <p class="carousel-caption">Ubicación estratégica y exclusiva.</p>
           </div>
           <div class="carousel-slide">
             <img 
               src="fotos/9.9.png" 
               alt="Foto Horizontal" 
             />
-            <p class="carousel-caption">Foto Horizontal Ejemplo</p>
+            <p class="carousel-caption">Jacuzzi en habitación principal. </p>
           </div>
           
         </div>
@@ -177,22 +215,22 @@
 
   <!-- Sección de Amenidades -->
   <section class="amenidades" id="amenidades">
-    <h2>Amenidades Exclusivas</h2>
+    <h2>Plusvalía y Exclusividad</h2>
     <div class="amenidades-grid">
       <div class="amenidad-card">
-        <img src="https://via.placeholder.com/150" alt="Amenidad 1">
-        <h3>Casa Club</h3>
-        <p>Espacio social para eventos privados y reuniones.</p>
+        <img src="fotos/location.png" alt="Amenidad 1">
+        <h3>Ubicación Privilegiada</h3>
+        <p>Ubicada en una de las zonas más exclusivas de Querétaro, con acceso a parques, áreas verdes y vialidades estratégicas que conectan con el resto de la ciudad.</p>
       </div>
       <div class="amenidad-card">
-        <img src="https://via.placeholder.com/150" alt="Amenidad 2">
-        <h3>Alberca</h3>
-        <p>Disfruta de un día soleado en la alberca semi-olímpica.</p>
+        <img src="fotos/diseño.png" alt="Amenidad 2">
+        <h3>Diseño y Acabados de Lujo:</h3>
+        <p>Arquitectura moderna, espacios amplios, materiales premium y tecnología de última generación que elevan el valor de la propiedad.</p>
       </div>
       <div class="amenidad-card">
-        <img src="https://via.placeholder.com/150" alt="Amenidad 3">
-        <h3>Áreas Verdes</h3>
-        <p>Zonas arboladas para caminar y ejercitarte al aire libre.</p>
+        <img src="fotos/servicios.png" alt="Amenidad 3">
+        <h3>Cercanía a Servicios Premium:</h3>
+        <p>A minutos de Antea Lifestyle Center, universidades de prestigio (UNAM Juriquilla, UVM), hospitales y centros de negocios, garantizando comodidad y conectividad.</p>
       </div>
     </div>
   </section>
@@ -205,7 +243,7 @@
     <div class="contacto-content">
       <h2>Contáctanos</h2>
       <p>Obtén más información o programa una visita.</p>
-      <form id="contactForm">
+      <form id="formulario"  action="https://formspree.io/f/xdkaygyg" method="POST">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required />
 
@@ -343,7 +381,53 @@
       }
     });
   });
-  
+  document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("videoPrincipal");
+  const muteButton = document.getElementById("muteTogglePrincipal");
+
+  // Función para verificar si el video está en pantalla
+  function checkVisibility() {
+    const rect = video.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.75 && rect.bottom > 0) {
+      if (video.paused) {
+        video.play(); // Reproducir el video si está visible
+      }
+      video.muted = false; // Activa el sonido
+    } else {
+      video.pause(); // Pausa el video si sale de pantalla
+      video.muted = true; // Mutea automáticamente
+    }
+    muteButton.textContent = video.muted ? "🔇" : "🔊"; // Actualiza el botón
+  }
+
+  // Detectar clic en el botón de mute
+  muteButton.addEventListener("click", function () {
+    video.muted = !video.muted;
+    muteButton.textContent = video.muted ? "🔇" : "🔊";
+  });
+
+  // Verificar la visibilidad del video al hacer scroll
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); // Ejecutar al cargar la página
+});
+// Detectar cuándo los elementos están visibles en el viewport
+document.addEventListener("DOMContentLoaded", function () {
+  const detalles = document.querySelectorAll(".lista-detalles li");
+
+  const checkVisibility = () => {
+    detalles.forEach((detalle) => {
+      const rect = detalle.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        detalle.classList.add("visible");
+      }
+    });
+  };
+
+  // Ejecutar la función al cargar y al hacer scroll
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility();
+});
+
   </script>
   
   
